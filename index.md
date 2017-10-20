@@ -8,7 +8,7 @@ Posting key: <input id="postingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
 Article text:<br/>
 <textarea id="article"></textarea><br/>
-<input id="postIt" type="button" value="Post it!" onClick=postArticle()>
+<input type="submit" value="Submit">
 </body>
 </html>
 
