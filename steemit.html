@@ -31,8 +31,6 @@ function postArticle()
           permlink = permlink.replace(c,'');
       }
   }
-  console.log("permlink is " + permlink);
-  return;
   steem.broadcast.comment(
     document.getElementById('postingKey').value, // posting wif
     '', // author, leave blank for new post
