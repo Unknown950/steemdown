@@ -1,8 +1,8 @@
  
 <html>
-<head><title>steem-js posting example</title></head>
+<head><title>Alternative posting page when SteemIt is down</title></head>
 <body>
-<h2>Post an article to the steem blockchain!</h2>
+<h2>Post an article to on SteemIt when SteemIt is down.</h2>
 Username: <input id="username" type="text"><br/>
 Posting key: <input id="postingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
