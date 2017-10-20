@@ -12,7 +12,7 @@ Posting key: <input id="postingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
 Article text:<br/>
 <textarea id="article"></textarea><br/>
-<input type="submit" value="Submit"onClick=postArticle()>
+<input type="submit" value="Submit">
  
 </body>
 </html>
