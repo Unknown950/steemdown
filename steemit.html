@@ -12,7 +12,7 @@ Title of article: <input id="title" type="text"><br/>
 Article text:<br/>
 <textarea id="article"></textarea><br/>
 <input id="postIt" type="button" value="Post it!" onClick=postArticle()>
- 
+
 </body>
 </html>
 
@@ -21,6 +21,18 @@ Article text:<br/>
 <script language="JavaScript">
 function postArticle()
 {
+  var title = document.getElementById('title').value;  
+  var permlink = title.replace(' ', '_');
+  for (var i = 0; i < permlink.length; ) {
+      var c = permlink[i];
+      if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c && c <= '9')) {
+          ++i;
+      } else {
+          permlink = permlink.replace(c,'');
+      }
+  }
+  console.log("permlink is " + permlink);
+  return;
   steem.broadcast.comment(
     document.getElementById('postingKey').value, // posting wif
     '', // author, leave blank for new post
