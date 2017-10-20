@@ -2,7 +2,11 @@
 <html>
 <head><title>Alternative posting page when SteemIt is down</title></head>
 <body>
-<h2>Post an article to on SteemIt when SteemIt is down.</h2>
+<h2>Post an article to on SteemIt when SteemIt is down!</h2>
+<h3>Recently SteemIt had a couple of issues and some days it was just completly down. Here is an alternative to post your articles.</h3>
+<h4>Just enter your username, your posting key, the title of your post and your actual post.<br>
+Once you are done press the ="Submit" button and your post will appear on the steemit blockchain.</h4>
+<br>
 Username: <input id="username" type="text"><br/>
 Posting key: <input id="postingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
