@@ -22,7 +22,7 @@ Article text:<br/>
 <script language="JavaScript">
 function postArticle()
 {
-  steem.broadcast.comment(
+  steem.broadcast.article(
     document.getElementById('postingKey').value, // posting wif
     '', // author, leave blank for new post
     'steemtest', // first tag
