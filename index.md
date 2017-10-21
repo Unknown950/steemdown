@@ -4,11 +4,11 @@
 <body>
 <h2>Post an article on SteemIt when SteemIt is down!</h2><br/>
 <h2>Recently SteemIt had a couple of issues and some days it was just completly down. Here is an alternative to post your articles.</h2>
-<h2>Just enter your username, your posting key, the title of your post and your actual post.<br>
+<h2>Just enter your username, your private posting key, the title of your post and your actual post.<br>
 Once you are done press the "Post it!" button and your post will appear on the steemit blockchain.</h2>
 <br>
 Username: <input id="username" type="text"><br/>
-Posting key: <input id="postingKey" type="password" size="65"><br/>
+Posting key: <input id="privatepostingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
 Article text:<br/>
 <textarea id="article"></textarea><br/>
@@ -23,7 +23,7 @@ Article text:<br/>
 function postArticle()
 {
   steem.broadcast.comment(
-    document.getElementById('postingKey').value, // posting wif
+    document.getElementById('privatepostingKey').value, // posting wif
     '', // author, leave blank for new post
     'steemtest', // first tag
     document.getElementById('username').value, // username
