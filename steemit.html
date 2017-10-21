@@ -11,16 +11,33 @@ Posting key: <input id="postingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
 Article text:<br/>
 <textarea id="article"></textarea><br/>
+Tags: <input id='tags' type='text'></br/>
 <input id="postIt" type="button" value="Post it!" onClick=postArticle()>
- 
+
 </body>
 </html>
 
 <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
 
 <script language="JavaScript">
+function derivePermlink(s) {
+  var permlink = s.replace(' ', '_');
+  for (var i = 0; i < permlink.length; ) {
+    var c = permlink[i];
+    if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c && c <= '9')) {
+        ++i;
+    } else {
+        permlink = permlink.replace(c,'');
+    }
+  }
+  return permlink;
+}
+
+
 function postArticle()
 {
+  var title = document.getElementById('title').value;  
+  var permlink = derivePermlink( title );
   steem.broadcast.comment(
     document.getElementById('postingKey').value, // posting wif
     '', // author, leave blank for new post
