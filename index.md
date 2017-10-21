@@ -8,7 +8,7 @@
 Once you are done press the "Post it!" button and your post will appear on the steemit blockchain.</h2>
 <br>
 Username: <input id="username" type="text"><br/>
-Private Posting key: <input id="privatepostingKey" type="password" size="65"><br/>
+Posting key: <input id="postingKey" type="password" size="65"><br/>
 Title of article: <input id="title" type="text"><br/>
 Article text:<br/>
 <textarea id="article"></textarea><br/>
@@ -23,7 +23,7 @@ Article text:<br/>
 function postArticle()
 {
   steem.broadcast.comment(
-    document.getElementById('privatepostingKey').value, // posting wif
+    document.getElementById('postingKey').value, // posting wif
     '', // author, leave blank for new post
     'steemtest', // first tag
     document.getElementById('username').value, // username
